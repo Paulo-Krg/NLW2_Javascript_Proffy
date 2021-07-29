@@ -17,7 +17,7 @@
 }
 
 #page-give-classes fieldset {
-  /* border: none; */
+  border: none;
   padding: 0 2.4rem;
 }
 
@@ -37,7 +37,7 @@
 }
 
 #page-give-classes fieldset legend button {
-  /* background: none; */
+  background: none;
   border: 0;
 
   color: var(--color-primary);

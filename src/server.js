@@ -23,32 +23,77 @@ const proffys = [
     },
 ]
 
+const subjects = [
+    "Artes",
+    "Biologia",
+    "Ciências",
+    "Educação Física",
+    "Física",
+    "Geografia",
+    "História",
+    "Matemática",
+    "Português",
+    "Química",
+]
+
+const weekdays = [
+    "Domingo",
+    "Segunda-feira",
+    "Terça-feira",
+    "Quarta-feira",
+    "Quinta-feira",
+    "Sexta-feira",
+    "Sábado",
+]
+
+function getSubject(subjectNumber) {
+    const position = +subjectNumber - 1
+    return subjects[position]
+}
+
+// Associa o nome de uma rota a um arquivo HTML
+function pageLanding(req, res) {
+    return res.render(__dirname + "/views/index.html");
+}
+
+function pageStudy(req, res) {
+    const filters = req.query
+    return res.render(__dirname + "/views/study.html", { proffys, filters, subjects, weekdays });
+}
+
+function pageGiveClasses(req, res) {
+    const data = req.query
+
+    // se tiver dados (data)
+    const isNotEmpty = Object.keys(data).length > 0
+
+    if (isNotEmpty) {
+
+        data.subject = getSubject(data.subject)
+
+        // adicinar dados a lista de proffys
+        proffys.push(data)
+
+        return res.redirect("/study")
+    }
+
+    return res.render(__dirname + "/views/give-classes.html", { subjects, weekdays });
+}
+
+// servidor
 const express = require('express');
 const server = express();
 
 // configurar nunjucks
-// const nunjucks = require('nunjucks');
-// nunjucks.configure('src/views', {
-//     express: server,
-//     noCache: true,
-// })
-
-// Associa o nome de uma rota a um arquivo HTML
-function pageLanding(req, res) {
-    return res.sendFile(__dirname + "/views/index.html");
-}
-
-function pageStudy(req, res) {
-    return res.sendFile(__dirname + "/views/study.html");
-}
-
-function pageGiveClasses(req, res) {
-    return res.sendFile(__dirname + "/views/give-classes.html");
-}
+const nunjucks = require('nunjucks');
+nunjucks.configure('src/views', {
+    express: server,
+    noCache: true,
+})
 
 server
-.use(express.static('public'))  // configura a pasta com os arquivos publicos estaticos
-.get("/", pageLanding)  // configura as rotas da aplicacao
-.get("/study", pageStudy)
-.get("/give-classes", pageGiveClasses)
-.listen(3333)   // configura a porta
+    .use(express.static('public'))  // configura a pasta com os arquivos publicos estaticos
+    .get("/", pageLanding)  // configura as rotas da aplicacao
+    .get("/study", pageStudy)
+    .get("/give-classes", pageGiveClasses)
+    .listen(3333)   // configura a porta
