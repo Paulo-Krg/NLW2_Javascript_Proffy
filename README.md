@@ -36,6 +36,11 @@ O que por sua vez vai executar o script configurado no package.json: `nodemon sr
 Você pode visualizar o layout do projeto através [deste link](https://www.figma.com/file/GHGS126t7WYjnPZdRKChJF/Proffy-Web?node-id=0%3A1).
 <br>É necessário ter conta no [Figma](http://figma.com/) para acessá-lo.
 
+<div align='center'>
+<img src="./.github/landing.png" width='500'>
+<img src="./.github/print1.png" width='500'>
+</div>
+
 ## 📄 Licença:
 Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 <br/>
