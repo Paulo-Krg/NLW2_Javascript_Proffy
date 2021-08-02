@@ -32,7 +32,7 @@ async function pageStudy(req, res) {
         AND classes.subject = '${filters.subject}'
     `
 
-    // caso haja erro na hora da consulta do banco de dados que
+    // caso haja erro na hora da consulta do banco de dados
     try {
         const db = await Database
         const proffys = await db.all(query)

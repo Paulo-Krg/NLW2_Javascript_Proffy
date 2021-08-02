@@ -5,17 +5,30 @@ document.querySelector("#add-time")
 
 function cloneField(){
     // Duplica os campos com a classe ".schedule-item"
-    // paramerto deep = true includes descendants
-    const newFieldContainer = document.querySelector('.schedule-item').cloneNode(true)
-
+    // parametro deep = true includes descendants
+    const newFieldContainer = document.querySelector('.schedule-item:last-of-type').cloneNode(true)
+    
     // Seleciona os campos input
     const fields = newFieldContainer.querySelectorAll('input')
-   
-    // Para cada campo input, limpa o campo
+    
+    // verifica se os campos anteriores ainda estão vazios
+    let noEmptyFields = true
+    
     fields.forEach(function (field) {
-        field.value=""
+        if (field.value == "") {
+            noEmptyFields = false
+        }
     })
-
-    // colocar na página onde?
-    document.querySelector('#schedule-items').appendChild(newFieldContainer)
+    
+    if (noEmptyFields) {
+        // Para cada campo input, limpa o campo
+        fields.forEach(function (field) {
+            field.value=""
+        })
+        
+        // colocar na página onde?
+        document.querySelector('#schedule-items').appendChild(newFieldContainer)
+    } else {
+        alert('Preencha todos os campos antes de adicionar novos')
+    }
 }

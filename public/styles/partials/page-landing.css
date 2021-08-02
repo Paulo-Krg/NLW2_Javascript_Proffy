@@ -72,23 +72,25 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    margin-top: 1.5rem;
 }
 
 .total-connections img {
     margin-left: 0.8rem;
 }
 
-/*
+
 @media (max-width: 1100px) {
     :root {
-        font-size: 40%; /* modificar as medidas rem /
+        font-size: 40%; /* modificar as medidas rem */
     }
 
     .logo-container img {
         height: 8rem;
     }
 }
-*/
+
 
 @media (min-width: 1100px) {
     #page-landing #container{
@@ -101,24 +103,24 @@
         "proffy image image"
         "button button texting";
         gap: 60px;
-        /* column-gap: 87px;
-        row-gap: 86px; */
+        column-gap: 87px;
+        row-gap: 86px;
     }
 
     .logo-container {
         grid-area: proffy;
         text-align: initial;
         align-self: center;
-        /* margin: 0; */
+        margin: 0;
     }
 
-    /* .logo-container img {
+    .logo-container img {
         height: 127px;
-    } */
+    }
 
     .hero-image {
         grid-area: image;
-        /* height: 350px; */
+        height: 350px;
     }
     
     .buttons-container {
@@ -129,6 +131,6 @@
 
     .total-connections {
         grid-area: texting;
-        /* justify-self: end; */
+        justify-self: end;
     }
 }
