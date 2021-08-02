@@ -2,8 +2,6 @@
   <img alt="Project Logo" height="80" title="Point to view title" src=".github/logo.svg" />
 </h1>
 
-![cover](.github/cover.png?style=flat)
-
 ## :computer: Projeto:
 Possibilita a conexão entre alunos e professores.
 
