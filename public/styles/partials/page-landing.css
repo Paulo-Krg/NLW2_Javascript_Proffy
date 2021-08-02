@@ -78,6 +78,18 @@
     margin-left: 0.8rem;
 }
 
+/*
+@media (max-width: 1100px) {
+    :root {
+        font-size: 40%; /* modificar as medidas rem /
+    }
+
+    .logo-container img {
+        height: 8rem;
+    }
+}
+*/
+
 @media (min-width: 1100px) {
     #page-landing #container{
         max-width: 1100px;
@@ -101,7 +113,7 @@
     }
 
     /* .logo-container img {
-        height: 127px
+        height: 127px;
     } */
 
     .hero-image {

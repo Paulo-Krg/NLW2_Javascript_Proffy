@@ -15,14 +15,18 @@ Possibilita a conexão entre alunos e professores.
 - Express: `npm install express`
 - Nodemon: `npm install nodemon -D`
 - Nunjucks: `npm install nunjucks`
+- SQLite: `npm install sqlite-async`
 
 ## :hammer_and_wrench: Features:
 - Declarando variaveis em CSS
-- 
+- HTML dinâmico usando nunjucks
+- Banco de dados relacional com SQLite
 
 ## :scroll: Referências interessantes:
 - Possiblidade de criar outros temas de cores usando variáveis CSS.
 - Duplicando elementos HTML usando o querySelector do JS.
+- Para criar um arquivo .sqlite novo é só rodar o db.js pelo terminal usando `node .\src\database\db.js`
+- Visualização do Banco de Dados com a extensão SQLite.
 
 ## :rocket: Getting Started:
 Usar no terminal o comando: `npm run dev`.<br>
