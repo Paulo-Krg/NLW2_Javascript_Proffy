@@ -2,10 +2,10 @@
   <img alt="Project Logo" height="80" title="Point to view title" src=".github/logo.svg" />
 </h1>
 
-## :computer: Projeto:
+## :computer: Project:
 Possibilita a conexão entre alunos e professores.
 
-## :sparkles: Tecnologias Utilizadas:
+## :sparkles: Technologies Used:
 - HTML
 - CSS
 - Javascript
@@ -20,27 +20,36 @@ Possibilita a conexão entre alunos e professores.
 - HTML dinâmico usando nunjucks
 - Banco de dados relacional com SQLite
 
-## :scroll: Referências interessantes:
+## :scroll: Interesting References:
 - Possiblidade de criar outros temas de cores usando variáveis CSS.
 - Duplicando elementos HTML usando o querySelector do JS.
 - Para criar um arquivo .sqlite novo é só rodar o db.js pelo terminal usando `node .\src\database\db.js`
-- Visualização do Banco de Dados com a extensão SQLite.
+- Visualização do Banco de Dados com a extensão SQLite do VSCode.
 
-## :rocket: Getting Started:
-Usar no terminal o comando: `npm run dev`.<br>
-O que por sua vez vai executar o script configurado no package.json: `nodemon src/server.js`
+## :rocket: Getting Started (running the application):
+#### On your local machine:
+1. Clone the repository to your local machine using `git clone git@github.com:Paulo-Krg/NLW2_Javascript_Proffy.git`
+1. Run `npm install` to install project dependencies
+1. Run `npm run dev` to start the dev server
+1. (which in turn will run the script configured in package.json: `nodemon src/server.js`)
+1. Open your web browser at http://localhost:3333/
+
+#### In your web browser:
+1. Open the Gitpod link: https://gitpod.io/#https://github.com/Paulo-Krg/NLW2_Javascript_Proffy
+1. Click `Open Preview` or `Open Browser` in the notification popup
+1. Don't forget to <strong>Stop the Workspace</strong> when you leave!
 
 ## :bookmark: Layout:
-Você pode visualizar o layout do projeto através [deste link](https://www.figma.com/file/GHGS126t7WYjnPZdRKChJF/Proffy-Web?node-id=0%3A1).
-<br>É necessário ter conta no [Figma](http://figma.com/) para acessá-lo.
+You can view the project layout through [this link](https://www.figma.com/file/GHGS126t7WYjnPZdRKChJF/Proffy-Web?node-id=0%3A1).
+<br>You must have a [Figma](http://figma.com/) account to access it.
 
 <div align='center'>
 <img src="./.github/landing.png" width='500'>
 <img src="./.github/print1.png" width='500'>
 </div>
 
-## 📄 Licença:
-Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+## 📄 License:
+This project is under the MIT license. See the [LICENSE](LICENSE) file for more details.
 <br/>
 
 <div align="center">
